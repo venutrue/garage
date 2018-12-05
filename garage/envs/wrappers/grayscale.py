@@ -23,7 +23,8 @@ class Grayscale(gym.Wrapper):
         env: gym.Env to wrap.
 
     Raises:
-        ValueError: If observation space shape is not 3 or environment is not Box.
+        ValueError: If observation space shape is not 3
+            or environment is not Box.
 
     """
 
@@ -46,6 +47,7 @@ class Grayscale(gym.Wrapper):
 
     @property
     def observation_space(self):
+        """gym.Env observation space."""
         return self._observation_space
 
     @observation_space.setter
